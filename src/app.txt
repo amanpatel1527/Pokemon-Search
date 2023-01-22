@@ -1,0 +1,44 @@
+{/* Event Bubbling and Event Captur */}
+      {/* <div onClickCapture={() => console.log("grandParent")} className="grandparent" style={{
+        width: 400,
+        height: 400,
+        backgroundColor: 'yellow'
+      }}>
+        <div onClickCapture={() => console.log("Parent")} className="parent" style={{
+          width: 200,
+          height: 200,
+          backgroundColor: 'grey'
+        }}>
+          <div onClickCapture={() => console.log("child")} className="child" style={{
+            width: 100,
+            height: 100,
+            backgroundColor: 'pink'
+          }}></div>
+        </div>
+      </div> */}
+
+
+
+
+      Counter code-----
+      const [counter, setCounter] = useState(0)
+
+    console.log("App component renders");
+    console.log(counter);
+
+    const increment = () => {
+        setCounter(counter + 1)
+    }
+
+    const decrement = () => {
+        setCounter(counter - 1)
+    }
+    return (
+        <div className='app'>
+            <h1>Counter : {counter} </h1>
+            <div>
+                <button onClick={increment} >increment</button>
+                <button onClick={decrement}>Decrement</button>
+            </div>
+        </div>
+    )
